@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    background: #EBE1FA;
+    line-height: 1.5;
+    
+    letter-spacing: .5px;
+}
+/* nav */
+nav{
+    background: #ffffff;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    padding: 15px;
+    cursor: pointer;
+}
+nav ul li.nav-item{
+    position: relative;
+    width: auto;
+    /* margin: 0px 16px; */
+    text-align: center;
+    order: 3;
+}
+nav ul li.nav-item:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #2D5F5D;
+    opacity: 0;
+    transition: all .5s linear;
+}
+nav ul li.nav-item:hover:after{
+    opacity: 1;
+    bottom: 13px;
+}
+nav ul li.nav-logo{
+    flex: 1;
+    font-size: 30px;
+    font-weight: 600;
+}
+nav ul li a{
+    color: #265077;
+    text-decoration: none;
+}
+nav ul li i{
+    font-size: 25px;
+}
+nav ul li.nav-button{
+    display: none;
+}
+nav ul li.nav-button.hide i:before{
+    content: '\f00d';
+}
+#about-us-banner{
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;   
+    margin-bottom: 10px; 
+}
+.banner-left{
+    background: url(../images/verne-ho-0LAJfSNa-xQ-unsplash.jpg) no-repeat center / cover;
+    width: 50%;
+    height: 500px;    
+}
+.banner-right{
+    width: 50%;
+    height: 500px;
+    background-color: #265077;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    color: white;
+}
+.banner-right h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.banner-right p{
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin: 10px 0;
+}
+#banner-right-btn{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 10px;
+}
+#banner-right-btn:hover{
+    color: white;
+    background-color: #265077;
+}
+/* CONTENT--------------------------------------- */
+#content{
+    
+    width: 80%;
+    margin: 0 auto;
+}
+#content h1,#content h3{
+    text-align: center;
+    color: #022140 ;
+    cursor: default;
+}
+#content h1{
+    text-shadow: 1.5px 1.5px  rgba(0,0,0,0.2);
+}
+
+#content h3{
+    font-size: 17px;
+    font-weight:400;
+    margin-bottom: 10px;
+}
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.point{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;   
+    padding: 10px;
+}
+.point-left{
+    padding-right: 20px;
+}
+.facolor{
+    color: #2D5F5D;
+    font-size: 50px;
+    width: 50px;
+}
+.fasize{
+    color: #2D5F5D;
+    font-size: 40px;
+}
+.point-right > #content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    
+}
+
+.point-right h2{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 2px;
+    margin-bottom: 5px;
+    color: #5C7877;
+}
+.point-right p{
+    
+    font-size: 15px;
+}
+.point-right h2:hover{
+    font-weight: 700;
+}
+hr{
+    width: 80%;
+    margin: 20px auto;
+}
+/* stories-------------------------- */
+.story-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    gap: 0px 0px;
+    grid-template-areas:
+        ". story1 story1-img ."
+        ". story2-img story2 ."
+        ". story3 story3-img .";
+}
+#story1 { 
+    text-align: right;
+    grid-area: story1; 
+}
+.story1-img { grid-area: story1-img; 
+    background: url(../images/william-bossen-Q1js5z4tKLA-unsplash.jpg) no-repeat center / cover;
+    opacity: 0.9;
+}
+
+#story2 { 
+    grid-area: story2; 
+    background: #1E4258 ;
+}
+.story2-img { 
+    grid-area: story2-img; 
+    background: url(../images/cowomen-pd5FVvQ9-aY-unsplash.jpg) no-repeat center / cover;
+    opacity: 0.9;
+}
+
+#story3 { 
+    text-align: right;
+    grid-area: story3; 
+}
+#story1, #story3{
+    background: #265077;
+}
+.story3-img { 
+    opacity: 0.9;
+    grid-area: story3-img; 
+    background: url(../images/magnet-me-78sXKT3EaTQ-unsplash.jpg) no-repeat center / cover;
+}
+.story{
+    padding: 55px 10px;
+
+}
+#stories h1{
+    text-shadow: 1.5px 1.5px  rgba(0,0,0,0.2);
+    cursor: default;
+    text-align: center;
+    color: #022140 ;
+    padding-bottom: 10px;
+}
+.story-right h2{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    color: white;
+}
+.story-right p{
+    font-size: 15px;
+    color: white;
+}
+#team{
+    background: #C2DAF2;
+    height: 150px;
+    text-align: center;
+    padding-top: 25px;
+}
+#team h2{
+    cursor: pointer;
+    font-weight: 600;
+
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    text-shadow: 1.5px 1.5px  rgba(0,0,0,0.2);
+}
+#team h2:hover{
+    font-weight: 700;
+}
+
+#team p{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+#team a{
+    text-decoration: none;
+    color: black;
+}
+#team a:hover{
+    font-weight: 600;
+}
+/* Location --------------------------------*/
+#location{
+    margin: 20px;
+}
+#location h1{
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px  rgba(0,0,0,0.2);
+}
+#location h1:hover{
+    font-weight: 700;
+}
+.location-container a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    padding-right: 1px;
+}
+.location-container a:hover{
+    font-weight: 600;
+}
+.location-container{
+    text-align: center;
+    
+}
+table {
+    width: 80%;
+    margin: 10px auto;
+    margin: left;
+    border-collapse: collapse;
+    border:white solid 2px;
+    border-spacing: 30px;
+    cursor: default;
+    
+}
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+ background: #99ced3;
+}
+tr:hover {
+    background-color: #ccc;
+    }
+th {
+    height: 50px;
+    background:#2D5F5D;
+    color: white;
+    font-weight: bold;
+}
+td, th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+/** Footer**/
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    color: #ffffff;
+    background: #265077;
+    padding: 40px;
+    }
+    .footer > *{
+    flex: 1 100%;
+    margin: 0px 20px;
+    }
+    .footer ul{
+    list-style-type: none;
+    padding-left: 0px;
+    }
+    .footer li{
+    line-height: 40px;
+    margin-right: 40px;
+    }
+    .footer a{
+    text-decoration: none;
+    color: #ffffff;
+    }
+    .l-footer p{
+    padding-right: 15%;
+    padding-bottom: 10px; 
+    }
+    .r-footer{
+    display: flex;
+    flex-flow: row wrap;
+    }
+    .r-footer h3{
+    color: #ffffff;
+    font-size: 15px;
+    }
+    .b-footer{
+    text-align: center;
+    padding-top: 20px;
+    }
+/* Responsive Code------------------------- */
+
+@media screen and (max-width: 768px){
+    nav{
+        padding: 2px 20px;
+    }
+    nav ul li.nav-item{
+        width: 100%;
+        display: none;
+    }
+    nav ul li.nav-item.show{
+        display: block;
+    }
+    nav ul li.nav-item:hover{
+        box-shadow: inset 0 0 5px #ffffff;
+        border-radius: 8px;
+    }
+    nav ul li.nav-item:hover:after{
+        opacity: 0;
+    }
+    nav ul li.nav-button{
+        display: block;
+    }
+    .r-footer li {
+        padding-bottom: 5px;
+    }
+    .r-footer li h3{
+        font-size: 18px;
+    }
+    /* banner */
+    #about-us-banner{
+        display: block;
+    }
+
+    .banner-left{
+        width: 100%;
+        height: 400px;
+    }
+    .banner-right{
+        height: 250px;
+        text-align:center;
+        width: 100%;
+    }
+    .banner-right h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .banner-right p{
+        font-weight: 300;
+        padding-bottom: 20px;
+        margin: 10px 0;
+    }
+
+    /* Content---------- */
+    .content-container{
+        display: block;
+    }
+    .point{
+        width: 80%;
+        margin: 0 auto;
+    }
+    /* Stories */
+
+    .story-container{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .story1-img .story2-img .story3-img{
+        display: none;
+    }
+    #story1, #story2, #story3{
+        text-align: center;
+    }
+    /* Team---------- */
+    #team{
+        height: 200px;
+        padding-top: 30px;
+    }
+    .story-right{
+        width: 80%;
+        margin: 0 auto;   
+    }
+    .story-right h2{
+        font-size: 20px;
+    }
+    #team p{
+        padding: 5px 20px;
+    }
+    /* Location------------------- */
+    .location-container{
+        text-align: center;
+    }
+           
+   table, thead, tbody, th, td, tr {
+       display: block;
+   }
+   
+   thead tr {
+       position: absolute;
+       top: -9999px;
+       left: -9999px;
+   }
+   tr { 
+       border: 1px solid #222629;
+       }
+   tr:hover {
+       background-color: #ccc;
+       }
+   td {
+       border: none;
+       border-bottom: 1px solid white;
+       position: relative;
+       padding-left: 40%;
+   }
+   td:before {
+       position: absolute;
+       left: 6px;
+       width: 45%;
+       padding-right: 10px;
+       white-space: nowrap;
+   }
+   
+   td:nth-of-type(1):before { content: "CITY"; }
+   td:nth-of-type(2):before { content: "SWIFT CODE"; }
+   td:nth-of-type(3):before { content: "BRANCH CODE"; }
+
+}
